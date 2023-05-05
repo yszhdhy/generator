@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8910f036-3423-402b-9585-084ea946e5c3" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\environment\java\maven\apache-maven-3.8.8-bin\apache-maven-3.8.8\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../environment/java/maven/apache-maven-3.8.8-bin/apache-maven-3.8.8" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\environment\java\maven\apache-maven-3.8.8-bin\apache-maven-3.8.8\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PJH7KpZ6GlSEJbFiSpt3ZzOGCN" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/project/kun/moreModule/untitled",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.15304947",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "dac9630aec642a428cd73f4be0a03569",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator\model" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator\construct\structure" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator\construct" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yszhdhy.generator.constant.common.pom" />
+      <recent name="com.yszhdhy.generator.construct.build.FileBuilder" />
+      <recent name="com.yszhdhy.generator.construct" />
+      <recent name="com.yszhdhy.generator.utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="YamlDisposition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.yszhdhy.generator.utils.YamlDisposition" />
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yszhdhy.generator.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.YamlDisposition" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8910f036-3423-402b-9585-084ea946e5c3" name="Changes" comment="" />
+      <created>1683168097280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683168097280</updated>
+      <workItem from="1683168098297" duration="7063000" />
+      <workItem from="1683189343844" duration="8123000" />
+      <workItem from="1683243919138" duration="13832000" />
+    </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1683257754061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683257754061</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first">
+      <created>1683257858915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683257858915</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
