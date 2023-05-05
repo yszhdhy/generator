@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8910f036-3423-402b-9585-084ea946e5c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/ModuleGroupId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/ModulePath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/PackageList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/PackagePath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/entity/Module.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/entity/PomAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/entity/YamlEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/FileBuilder/BuildTheFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/FileBuilder/service/SpringbootInitiate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/FileBuilder/service/yaml/YamlInitiate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/Model/Builder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/Model/ModelPomResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/common/BuilderOfCommon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/common/commonUtil/BuilderOfCommonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/common/serviceUtil/BuilderOfServiceUitl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/MkdirFileWriteUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/PomResolverUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/PomUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/YamlDisposition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/CodeTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/Knife4jCodeConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/MyBatisPlusCodeConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/SpringParentCodeConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/WebCodeConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/ModuleGroupId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/ModulePath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/PackageList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/PackagePath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/pom/PomAttributeConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/yaml/YamlPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/dependency/DependencyConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/yaml/MyBatisPlusYamlConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/yaml/SpringBootParentYamlConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/yaml/WebYamlConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/yaml/YamlTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/BuildTheFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/SpringbootInitiate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/pom/PomInitiate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/yaml/YamlInitiate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/ItemMovement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/Builder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/MyBatisPlusBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/SpringBootParentBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/SpringBootWebBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/BuilderOfCommon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/commonUtil/BuilderOfCommonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/serviceUtil/BuilderOfServiceUitl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/BaseStarter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/BaseStarterAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/dto/SpringBootParentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/project/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/project/ProjectInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/vo/Dependency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/vo/FileEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/vo/Module.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/vo/OtherNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/vo/PomAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/vo/YamlEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled/src/main/java/com/xc/example/controller/Ceshi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../untitled/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\environment\java\maven\apache-maven-3.8.8-bin\apache-maven-3.8.8\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../environment/java/maven/apache-maven-3.8.8-bin/apache-maven-3.8.8" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\environment\java\maven\apache-maven-3.8.8-bin\apache-maven-3.8.8\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PJH7KpZ6GlSEJbFiSpt3ZzOGCN" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project/kun/moreModule/untitled&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.15304947&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;dac9630aec642a428cd73f4be0a03569&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator\model" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator\construct\structure" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator\construct" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yszhdhy.generator.constant.common.pom" />
+      <recent name="com.yszhdhy.generator.construct.build.FileBuilder" />
+      <recent name="com.yszhdhy.generator.construct" />
+      <recent name="com.yszhdhy.generator.utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="YamlDisposition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.yszhdhy.generator.utils.YamlDisposition" />
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yszhdhy.generator.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.YamlDisposition" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8910f036-3423-402b-9585-084ea946e5c3" name="Changes" comment="" />
+      <created>1683168097280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683168097280</updated>
+      <workItem from="1683168098297" duration="7063000" />
+      <workItem from="1683189343844" duration="8123000" />
+      <workItem from="1683243919138" duration="12916000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
