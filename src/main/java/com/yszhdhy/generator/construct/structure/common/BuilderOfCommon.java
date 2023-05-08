@@ -5,6 +5,7 @@ import com.yszhdhy.generator.constant.common.ModulePath;
 import com.yszhdhy.generator.constant.common.PackageList;
 import com.yszhdhy.generator.constant.common.PackagePath;
 import com.yszhdhy.generator.construct.structure.common.commonUtil.BuilderOfCommonUtil;
+import com.yszhdhy.generator.construct.structure.common.serviceUtil.BuilderOfServiceUitl;
 import com.yszhdhy.generator.model.vo.Module;
 import com.yszhdhy.generator.model.project.ProjectInfo;
 import com.yszhdhy.generator.utils.FileUtils;
@@ -68,8 +69,8 @@ public class BuilderOfCommon {
     public static void BuilderServiceUtil(ProjectInfo info, String basePath) throws DocumentException, IOException {
         List<String> packages = PackageList.BASE_SERVICE_UTIL_PACKAGE.getPackages();
 
-        //创建 common-util 文件夹
-        BuilderOfCommonUtil.construct(info, PackagePath.PACKAGE_COMMON_PATH.getPackagePath(),
+        //创建 service-util 文件夹
+        BuilderOfServiceUitl.construct(info, PackagePath.PACKAGE_COMMON_PATH.getPackagePath(),
                 ModulePath.MODULE_SERVICE_UTIL_PATH.getModulePath(),
                 ModulePath.MODULE_SERVICE_UTIL_PATH.getModulePath().replaceAll("/",""),
                 packages);

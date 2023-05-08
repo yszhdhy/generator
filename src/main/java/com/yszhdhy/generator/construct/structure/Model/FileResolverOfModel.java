@@ -19,7 +19,7 @@ import java.util.List;
 
 public class FileResolverOfModel {
 
-    private static final List<String> BASE_PACKAGE = Arrays.asList( "vo", "to", "dto");
+    private static final List<String> BASE_PACKAGE = Arrays.asList( "model","vo", "to", "dto");
 
 
     public static void construct(ProjectInfo info, String basePath, String ModulePath){

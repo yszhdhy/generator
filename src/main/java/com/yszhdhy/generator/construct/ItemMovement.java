@@ -139,9 +139,16 @@ public class ItemMovement {
         properties.addElement("maven.compiler.target").setText("8");
         properties.addElement("project.build.sourceEncoding").setText("UTF-8");
         properties.addElement("java.version").setText("1.8");
+        properties.addElement("mybatis-plus.version").setText("3.4.1");
+        properties.addElement("mysql.version").setText("8.0.30");
+        properties.addElement("knife4j.version").setText("3.0.3");
+        properties.addElement("jwt.version").setText("0.9.1");
+        properties.addElement("fastjson.version").setText("2.0.21");
 
         // 在<dependencies xmlns="">和</properties>之间添加间距
         properties.addText("\n    ");
+
+
 
         // 创建modules元素并添加子元素
         Element modules = project.addElement("modules");
@@ -150,14 +157,46 @@ public class ItemMovement {
         // 在<dependencies xmlns="">和</properties>之间添加间距
         modules.addText("\n    ");
 
-        // 创建dependencies元素并添加子元素
-        Element dependencies = project.addElement("dependencies");
-        Element dependency = dependencies.addElement("dependency");
-        dependency.addElement("groupId").setText("org.dom4j");
-        dependency.addElement("artifactId").setText("dom4j");
-        dependency.addElement("version").setText("2.1.3");
+        // 创建依赖管理
+        Element dependencyManagement = project.addElement("dependencyManagement");
+        Element dependencies = dependencyManagement.addElement("dependencies");
+        Element mybatis = dependencies.addElement("dependency");
+        mybatis.addElement("groupId").setText("com.baomidou");
+        mybatis.addElement("artifactId").setText("mybatis-plus-boot-starter");
+        mybatis.addElement("version").setText("${mybatis-plus.version}");
 
-        // 添加其他依赖项，省略代码
+        Element mysql = dependencies.addElement("dependency");
+        mysql.addElement("groupId").setText("mysql");
+        mysql.addElement("artifactId").setText("mysql-connector-java");
+        mysql.addElement("version").setText("${mysql.version}");
+
+        Element fastjson = dependencies.addElement("dependency");
+        fastjson.addElement("groupId").setText("com.alibaba");
+        fastjson.addElement("artifactId").setText("fastjson");
+        fastjson.addElement("version").setText("${fastjson.version}");
+
+        Element knife4j = dependencies.addElement("dependency");
+        knife4j.addElement("groupId").setText("com.github.xiaoymin");
+        knife4j.addElement("artifactId").setText("knife4j-spring-boot-starter");
+        knife4j.addElement("version").setText("${knife4j.version}");
+
+        Element jjwt = dependencies.addElement("dependency");
+        jjwt.addElement("groupId").setText("io.jsonwebtoken");
+        jjwt.addElement("artifactId").setText("jjwt");
+        jjwt.addElement("version").setText("${jwt.version}");
+
+        // 打包插件
+        Element build = project.addElement("build");
+        Element plugins = build.addElement("plugins");
+        Element plugin = plugins.addElement("plugin");
+        plugin.addElement("groupId").setText("org.apache.maven.plugins");
+        plugin.addElement("artifactId").setText("maven-compiler-plugin");
+        plugin.addElement("version").setText("3.1");
+        Element configuration = plugin.addElement("configuration");
+        configuration.addElement("source").setText("1.8");
+        configuration.addElement("target").setText("1.8");
+
+
 
         // 输出XML文件
         try {

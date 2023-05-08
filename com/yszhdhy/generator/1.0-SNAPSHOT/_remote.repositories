@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon May 08 18:50:46 CST 2023
+generator-1.0-SNAPSHOT.pom>=
+generator-1.0-SNAPSHOT.war>=
+generator-1.0-SNAPSHOT.jar>=

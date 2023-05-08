@@ -31,12 +31,5 @@ public class SpringbootInitiate {
 
 
 
-//        List<CodeTemplate> codeTemplateList = new ArrayList<>(Arrays.asList(SpringParentCodeConst.values()));
-//
-//        String filePath = info.getBaseGeneratePathForModuleGroupId(SystemUtils.getProjectPath(),
-//                null, ModuleGroupId.MODULE_SERVICE_UTIL_CESHI_GROUP_ID.getModuleGroupId());
-//        BuildTheFile.construct(codeTemplateList,filePath, ModuleGroupId.MODULE_SERVICE_UTIL_CESHI_GROUP_ID.getModuleGroupId());
-
-
     }
 }

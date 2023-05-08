@@ -25,6 +25,10 @@ public enum MyBatisPlusYamlConst implements YamlTemplate {
     private final String key;
     private final Object defaultValue;
 
+    public void setDefaultValue(String defaultValue){
+        defaultValue = defaultValue;
+    }
+
     @Override
     public String getKey() {
         return key;

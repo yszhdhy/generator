@@ -161,7 +161,7 @@ public enum WebCodeConst implements CodeTemplate {
             "    \n" +
             "}"),
 
-    GLOBAL_EXCEPTION_HANDLER("common/exception", "GlobalExceptionHandler.java", "%s\n\n" +
+    GLOBAL_EXCEPTION_HANDLER("common/exception", "service-util/GlobalExceptionHandler.ftl", "%s\n\n" +
             "import " + PomUtils.getSingleValue("groupId") + ".common.result.R;\n" +
             "import " + PomUtils.getSingleValue("groupId") + ".common.result.ResultCode;\n" +
             "import org.slf4j.Logger;\n" +

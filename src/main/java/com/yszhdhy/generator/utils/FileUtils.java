@@ -1,5 +1,6 @@
 package com.yszhdhy.generator.utils;
 
+import com.yszhdhy.generator.model.vo.PackageVo;
 import org.springframework.util.StringUtils;
 
 import com.yszhdhy.generator.model.project.ProjectInfo;
@@ -45,6 +46,21 @@ public class FileUtils {
         }
     }
 
+
+    public static void mkdir(String basePackage, PackageVo packageVo) {
+        String filePath = basePackage + "/" + packageVo.getPackageName();
+        File file = new File(filePath);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+
+        if(!StringUtils.isEmpty(packageVo.getChildPackage())){
+            for (PackageVo vo : packageVo.getChildPackage()) {
+                mkdir(filePath,vo);
+            }
+        }
+
+    }
 
     /**
      * 创建一个空文件

@@ -5,19 +5,40 @@ import com.yszhdhy.generator.constant.code.CodeTemplate;
 import com.yszhdhy.generator.constant.common.PackagePath;
 import com.yszhdhy.generator.constant.common.pom.PomAttributeConstant;
 import com.yszhdhy.generator.constant.common.yaml.YamlPath;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.commonUtil.JwtHelperBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.commonUtil.MD5Builder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.commonUtil.ResultBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.commonUtil.ResultCodeEnumBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.serviceUtil.GlobalExceptionHandlerBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.serviceUtil.GuiguExceptionBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.serviceUtil.Knife4jConfigBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.common.serviceUtil.MybatisPlusConfigBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.model.system.*;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.model.vo.*;
 import com.yszhdhy.generator.construct.FileBuilderOfProject.service.SpringbootInitiate;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.controller.IndexControllerBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.controller.SysMenuControllerBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.controller.SysRoleControllerBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.controller.SysUserControllerBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.mapper.*;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.mapper.xml.SysMenuMapperXmlBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.mapper.xml.SysRoleMapperXmlBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.mapper.xml.SysUserMapperXmlBuilder;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.mapper.xml.SysUserRoleMapperXmlBuilder;
 import com.yszhdhy.generator.construct.FileBuilderOfProject.service.pom.PomInitiate;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.service.*;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.service.impl.*;
+import com.yszhdhy.generator.construct.FileBuilderOfProject.service.utils.MenuHelperBuilder;
 import com.yszhdhy.generator.construct.FileBuilderOfProject.service.yaml.YamlInitiate;
 import com.yszhdhy.generator.construct.build.Builder;
 import com.yszhdhy.generator.construct.build.Director;
-import com.yszhdhy.generator.construct.build.FileBuilder.MyBatisPlusBuilder;
-import com.yszhdhy.generator.construct.build.FileBuilder.SpringBootParentBuilder;
-import com.yszhdhy.generator.construct.build.FileBuilder.SpringBootWebBuilder;
+import com.yszhdhy.generator.construct.build.FileBuilder.*;
 import com.yszhdhy.generator.model.project.ProjectInfo;
 import com.yszhdhy.generator.model.vo.Dependency;
 import com.yszhdhy.generator.model.vo.FileEntity;
 import com.yszhdhy.generator.model.vo.OtherNode;
 import com.yszhdhy.generator.utils.MkdirFileWriteUtils;
+import com.yszhdhy.generator.utils.PomAndYamlBuildMap;
 import com.yszhdhy.generator.utils.PomUtils;
 import org.dom4j.DocumentException;
 
@@ -52,14 +73,18 @@ public class BuildTheFile {
 
         //构建 yaml map
         Map<String, Object> map = new HashMap<>();
-        map = builderYaml(map, new MyBatisPlusBuilder());
-        map = builderYaml(map,new SpringBootParentBuilder());
-        map = builderYaml(map,new SpringBootWebBuilder());
+        map = PomAndYamlBuildMap.builderYaml(map, new MyBatisPlusBuilder());
+        map = PomAndYamlBuildMap.builderYaml(map,new SpringBootParentBuilder());
+        map = PomAndYamlBuildMap.builderYaml(map,new SpringBootWebBuilder());
 
 
         //构建 dependencies 集合
         List<Dependency> dependencies =new ArrayList<>();
-        dependencies = builderPom(dependencies,new SpringBootWebBuilder());
+        dependencies = PomAndYamlBuildMap.builderPom(dependencies,new SpringBootWebBuilder());
+        dependencies = PomAndYamlBuildMap.builderPom(dependencies,new LombokBuilder());
+        dependencies = PomAndYamlBuildMap.builderPom(dependencies,new ModelBuilder());
+        dependencies = PomAndYamlBuildMap.builderPom(dependencies,new ServiceUtilBuilder());
+
 
 
         //构建 yaml
@@ -82,29 +107,91 @@ public class BuildTheFile {
         otherNode.setNodes(nodes);
 
         PomUtils.addOtherNodes(otherNode);
+
+        //构建所有的文件
+        serviceUtil();
+        commonUtil();
+        model();
+        service();
+    }
+
+    public static void serviceUtil() throws IOException {
+        Knife4jConfigBuilder.construct();  // knife4j 配置文件
+        MybatisPlusConfigBuilder.construct();  // Mybatis 配置文件
+        GlobalExceptionHandlerBuilder.construct();  // GlobalExceptionHandler 配置文件
+        GuiguExceptionBuilder.construct();  // GuiguException 配置文件
+    }
+
+    public static void commonUtil() throws IOException {
+        JwtHelperBuilder.construct();  // JwtHelper 配置文件
+        MD5Builder.construct();  // MD5 配置文件
+        ResultBuilder.construct();  // Result 配置文件
+        ResultCodeEnumBuilder.construct();  // ResultCodeEnum 配置文件
     }
 
 
-    public static Map<String, Object> builderYaml(Map<String, Object> map, Builder builder) throws IOException {
-        //构建mybatis
-        Director director = new Director(builder);
-        FileEntity fileEntity = director.construct();
+    public static void model() throws IOException {
+        SysMenuBuilder.construct();
+        SysLoginLogBuilder.construct();
+        SysOperLogBuilder.construct();
+        SysRoleMenuBuilder.construct();
+        SysPostBuilder.construct();
+        SysRoleBuilder.construct();
+        SysUserRoleBuilder.construct();
+        SysUserbuilder.construct();
+        BaseEntityBuilder.construct();
 
-        Map<String, Object> assemble = YamlInitiate.assemble(map,fileEntity.getYamlMap());
-
-        return assemble;
+        AssginMenuVoBuilder.construct();
+        AssginRoleVoBuilder.construct();
+        LoginVoBuilder.construct();
+        MetaVoBuilder.construct();
+        RouterVoBuilder.construct();
+        SysLoginLogQueryVoBuilder.construct();
+        SysOperLogQueryVoBuilder.construct();
+        SysPostQueryVoBuilder.construct();
+        SysRoleQueryVoBuilder.construct();
+        SysUserQueryVoBuilder.construct();
     }
 
 
-    public static List<Dependency> builderPom(List<Dependency> dependencies, Builder builder) throws IOException {
-        //构建mybatis
-        Director director = new Director(builder);
-        FileEntity fileEntity = director.construct();
+    public static void service() throws IOException {
+        IndexControllerBuilder.construct();
+        SysMenuControllerBuilder.construct();
+        SysRoleControllerBuilder.construct();
+        SysUserControllerBuilder.construct();
 
-        List<Dependency> assemble = PomInitiate.assemble(dependencies,fileEntity.getDependencyList());
+        SysMenuMapperBuilder.construct();
+        SysRoleMapperBuilder.construct();
+        SysRoleMenuMapperBuilder.construct();
+        SysUserMapperBuilder.construct();
+        SysUserRoleMapperBuilder.construct();
 
-        return assemble;
+        SysMenuMapperXmlBuilder.construct();
+        SysRoleMapperXmlBuilder.construct();
+        SysUserMapperXmlBuilder.construct();
+        SysUserRoleMapperXmlBuilder.construct();
+
+        // service
+        SysMenuServiceBuilder.construct();
+        SysRoleMenuServiceBuilder.construct();
+        SysRoleServiceBuilder.construct();
+        SysUserRoleServiceBuilder.construct();
+        SysUserServiceBuilder.construct();
+
+        //impl
+        SysMenuServiceImplBuilder.construct();
+        SysRoleMenuServiceImplBuilder.construct();
+        SysRoleServiceImplBuilder.construct();
+//        SysUserDetailsServiceImplBuilder.construct();
+        SysUserRoleServiceImplBuilder.construct();
+        SysUserServiceImplBuilder.construct();
+
+
+        //utils
+        MenuHelperBuilder.construct();
+
     }
+
 
 
 }

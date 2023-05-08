@@ -161,6 +161,9 @@ public class PomUtils {
         if (dependency.getVersion() != null) {
             dependencyElement.addElement(DependencyConst.VERSION.getTabName()).setText(dependency.getVersion());
         }
+        if (dependency.getScope() != null) {
+            dependencyElement.addElement(DependencyConst.SCOPE.getTabName()).setText(dependency.getScope());
+        }
         System.out.println("添加成功");
         refreshPom();
     }
