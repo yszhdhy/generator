@@ -15,18 +15,58 @@
         <maven.compiler.source>8</maven.compiler.source>  
         <maven.compiler.target>8</maven.compiler.target>  
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
-        <java.version>1.8</java.version> 
+        <java.version>1.8</java.version>  
+        <mybatis-plus.version>3.4.1</mybatis-plus.version>  
+        <mysql.version>8.0.30</mysql.version>  
+        <knife4j.version>3.0.3</knife4j.version>  
+        <jwt.version>0.9.1</jwt.version>  
+        <fastjson.version>2.0.21</fastjson.version> 
     </properties>  
     <modules> 
         <module>untitled</module>  
         <module>model</module>  
         <module>common</module>
     </modules>  
-    <dependencies> 
-        <dependency> 
-            <groupId>org.dom4j</groupId>  
-            <artifactId>dom4j</artifactId>  
-            <version>2.1.3</version> 
-        </dependency> 
-    </dependencies> 
+    <dependencyManagement> 
+        <dependencies> 
+            <dependency> 
+                <groupId>com.baomidou</groupId>  
+                <artifactId>mybatis-plus-boot-starter</artifactId>  
+                <version>${mybatis-plus.version}</version> 
+            </dependency>  
+            <dependency> 
+                <groupId>mysql</groupId>  
+                <artifactId>mysql-connector-java</artifactId>  
+                <version>${mysql.version}</version> 
+            </dependency>  
+            <dependency> 
+                <groupId>com.alibaba</groupId>  
+                <artifactId>fastjson</artifactId>  
+                <version>${fastjson.version}</version> 
+            </dependency>  
+            <dependency> 
+                <groupId>com.github.xiaoymin</groupId>  
+                <artifactId>knife4j-spring-boot-starter</artifactId>  
+                <version>${knife4j.version}</version> 
+            </dependency>  
+            <dependency> 
+                <groupId>io.jsonwebtoken</groupId>  
+                <artifactId>jjwt</artifactId>  
+                <version>${jwt.version}</version> 
+            </dependency> 
+        </dependencies> 
+    </dependencyManagement>  
+    <build> 
+        <plugins> 
+            <plugin> 
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-compiler-plugin</artifactId>  
+                <version>3.1</version>  
+                <configuration> 
+                    <source>1.8</source>  
+                    <target>1.8</target> 
+                </configuration> 
+            </plugin> 
+        </plugins> 
+    </build> 
 </project>
