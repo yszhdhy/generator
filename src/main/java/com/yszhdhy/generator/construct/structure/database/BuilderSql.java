@@ -2,23 +2,61 @@ package com.yszhdhy.generator.construct.structure.database;
 
 
 import com.yszhdhy.generator.constant.code.sql.*;
+import com.yszhdhy.generator.constant.common.yaml.YamlPath;
 import com.yszhdhy.generator.constant.yaml.MyBatisPlusYamlConst;
+import com.yszhdhy.generator.utils.YamlDisposition;
 import com.yszhdhy.generator.utils.database.TestConnection;
+import org.yaml.snakeyaml.Yaml;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BuilderSql {
 
-    public static void construct(String dbUrl,String port, String userName, String dbPassword, String dbName){
+    public static void construct(String dbUrl,String port, String userName, String dbPassword, String dbName) throws IOException {
         create(dbUrl,port,userName,dbPassword,dbName);
 
         //修改mybatis中配置
-        MyBatisPlusYamlConst.USERNAME.setDefaultValue(userName);
-        MyBatisPlusYamlConst.PASSWORD.setDefaultValue(dbPassword);
-        MyBatisPlusYamlConst.URL.setDefaultValue("jdbc:mysql://"+dbUrl+":"+port+"/"+dbName+"?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai");
+//        MyBatisPlusYamlConst.USERNAME.setDefaultValue(userName);
+//        MyBatisPlusYamlConst.PASSWORD.setDefaultValue(dbPassword);
+//        MyBatisPlusYamlConst.URL.setDefaultValue("jdbc:mysql://"+dbUrl+":"+port+"/"+dbName+"?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai");
+
+
+        System.out.println("文件删除成功");
+
+        // 从YAML文件中加载数据到Java对象中
+        InputStream input = new FileInputStream(new File(YamlPath.YAML_PATH.getYamlPath()));
+        Yaml yaml = new Yaml();
+        Object obj = yaml.load(input);
+
+        Map<String, Object> map = null;
+        // 修改Java对象中的某条消息
+        // 假设我们要将message1的内容从"Hello"修改为"World"
+        if (obj instanceof Map) {
+            map = (Map<String, Object>) obj;
+            Map<String, Object> message1 = (Map<String, Object>) map.get("spring");
+            Map<String, Object> message2 = (Map<String, Object>) message1.get("datasource");
+            message2.put("url", "jdbc:mysql://"+dbUrl+":"+port+"/"+dbName+"?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai");
+            message2.put("password", dbPassword);
+            message2.put("username", userName);
+
+
+        }
+        input.close();
+
+        File file = new File(YamlPath.YAML_PATH.getYamlPath());
+        boolean delete = file.delete();
+        System.out.println(delete+"delenvksnng");
+        if(delete){
+            // 将修改后的Java对象写回YAML格式
+            YamlDisposition.write(YamlPath.YAML_PATH.getYamlPath(),map);
+        }
+
+
+//        Writer output = new FileWriter(new File(YamlPath.YAML_PATH.getYamlPath()));
+//        yaml.dump(obj, output);
     }
 
 

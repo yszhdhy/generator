@@ -55,13 +55,14 @@ public class BuilderOfServiceUitl {
      * @return
      * @throws IOException
      */
-    public static List<Dependency> addDependency() throws IOException {
+    public static List<Dependency> addDependency() throws IOException, DocumentException {
         //构建 dependencies 集合
         List<Dependency> dependencies =new ArrayList<>();
         dependencies = PomAndYamlBuildMap.builderPom(dependencies,new MyBatisPlusBuilder());
         dependencies = PomAndYamlBuildMap.builderPom(dependencies,new SpringBootWebBuilder());
         dependencies = PomAndYamlBuildMap.builderPom(dependencies,new Knife4jBuilder());
         dependencies = PomAndYamlBuildMap.builderPom(dependencies,new LombokBuilder());
+//        PomUtils.init(PackagePath.PACKAGE_COMMON_PATH.getPackagePath()+"/pom.xml");
         dependencies = PomAndYamlBuildMap.builderPom(dependencies,new CommonUtilBuilder());
 
         return dependencies;

@@ -36,9 +36,10 @@ public class PomUtils {
      */
     public static void init(String pomPath) throws DocumentException, FileNotFoundException {
         pomFile = pomPath;
-        System.out.println(pomPath);
+//        System.out.println(pomPath +"wo是最后被指定的service");
         File file = new File(pomPath);
         if(file.exists()){
+            System.out.println(pomPath +"wo是最后被指定的service");
             document = new SAXReader().read(new File(pomPath));
         }
 
@@ -245,6 +246,39 @@ public class PomUtils {
         }
 
     }
+
+    public static void addResource() throws IOException {
+        // 设置默认命名空间
+        Namespace namespace = Namespace.get(URL);
+
+        // 创建XPath对象
+        XPath xpath = DocumentHelper.createXPath("/ns:project/ns:build");
+        xpath.setNamespaceURIs(Collections.singletonMap("ns", namespace.getURI()));
+        Element node = (Element) xpath.selectSingleNode(document);
+
+        Element resources = node.addElement("resources");
+        Element resource1 = resources.addElement("resource");
+        resource1.addElement("directory").setText("src/main/java");
+        Element includes = resource1.addElement("includes");
+        includes.addElement("include").setText("**/*.yml");
+        includes.addElement("include").setText("**/*.properties");
+        includes.addElement("include").setText("**/*.xml");
+        includes.addElement("include").setText("**/*.yaml");
+        resource1.addElement("filtering").setText("false");
+
+
+        Element resource2 = resources.addElement("resource");
+        resource2.addElement("directory").setText("src/main/resources");
+        Element includes2 = resource2.addElement("includes");
+        includes2.addElement("include").setText("**/*.yml");
+        includes2.addElement("include").setText("**/*.properties");
+        includes2.addElement("include").setText("**/*.xml");
+        includes2.addElement("include").setText("**/*.yaml");
+        includes2.addElement("include").setText("**/*.png");
+        resource2.addElement("filtering").setText("false");
+        refreshPom();  //刷新
+    }
+
 
 
     /**

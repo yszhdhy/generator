@@ -8,10 +8,12 @@ import com.yszhdhy.generator.construct.ItemMovement;
 import com.yszhdhy.generator.construct.structure.Model.Builder;
 import com.yszhdhy.generator.construct.structure.common.BuilderOfCommon;
 import com.yszhdhy.generator.construct.structure.database.BuilderSql;
+import com.yszhdhy.generator.construct.structure.vue.BuilderOfVue;
 import com.yszhdhy.generator.model.vo.PackageVo;
 import com.yszhdhy.generator.utils.*;
 import org.dom4j.DocumentException;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.List;
@@ -42,8 +44,7 @@ public class Project {
     public void generate(String dbUrl,String port, String userName, String dbPassword, String dbName) {
         try {
 
-            //构建数据库
-            BuilderSql.construct(dbUrl,port,userName,dbPassword,dbName);
+
 
             // 创建基本目录
             for (PackageVo packageVo : BASE_PACKAGE) {
@@ -70,12 +71,22 @@ public class Project {
             //构建 common 模块
             BuilderOfCommon.construct(info,SystemUtils.getProjectPath(),"/common");
 
+            //构建vue 模块
+            BuilderOfVue.construct();
+
+            //重新指定service的pom文件
+            PomUtils.init(SystemUtils.getProjectPath()+"/"+new File(SystemUtils.getProjectPath()).getName() +"/pom.xml");
             //构建文件
             BuildTheFile.buildTheFile(info);
+
+            //构建数据库
+            BuilderSql.construct(dbUrl,port,userName,dbPassword,dbName);
 
             //再次删除 src
             DeleteFile.deleteFile();
 
+
+            System.out.println("heoll");
 
 
         } catch (Exception e) {
