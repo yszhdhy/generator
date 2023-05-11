@@ -23,6 +23,12 @@
 
 ![image](https://github.com/yszhdhy/generator/assets/104622610/c35060ef-2ee7-483a-8a1e-f41e48a68704)
 
+
+lisi登录界面，界面会根据用户的权限进行显示
+
+![image](https://github.com/yszhdhy/generator/assets/104622610/f5e535af-ea98-432e-9077-cf78ee022de2)
+
+
 后端：
 
 ![image](https://github.com/yszhdhy/generator/assets/104622610/6ae015e2-28c5-4e7a-8932-63e7fea15021)
