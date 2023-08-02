@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8910f036-3423-402b-9585-084ea946e5c3" name="Changes" comment="第二版">
+      <change afterPath="$PROJECT_DIR$/projectNote/minio/minio.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectNote/security/security.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/Ceshi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/TemplateFileList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/VoPackageList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/templateParameters/TemplateParametersList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/yaml/DispositionYaml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/commonElasticsearch/ElasticsearchModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/commonMinio/MinioModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/commonUtil/CommonUtilModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/security/SecurityModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/serviceUtil/ServiceUtilModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/ModelModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/ServiceModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/generatorCRUD/GeneratorCRUDModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/generatorCRUD/templates/TemplatesBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/generatorCRUD/utils/OtherUtilsBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/FileUtilsVue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/VueBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/VueModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/AppBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/assets/AssetsBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/icons/svg/SvgBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/layout/LayoutBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/router/RouterBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/store/StoreBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/styles/StylesBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/utils/UtilsBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue/src/views/ViewsBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/vue3/Vue3ModelFileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/CommonElasticsearchDependencyBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/CommonMinioDependencyBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/CommonSecurityBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/CommonsIoBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/MinioBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/SpringElasticsearchBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/SpringRedisBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/SpringSecurityBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/ThymeleafBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/commonElasticsearch/BuilderOfElasticsearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/commonMinio/BuilderOfMinio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/commonSecurity/BuilderOfSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/generatorCRUD/BuilderOfGeneratorCRUD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/vue/BuilderOfVue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/vue3/BuilderOfVue3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/dto/TemplateParametersDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/vo/VueFileVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-minio/config/MinIOConfig.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-minio/config/MinIOConfigProperties.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-minio/controller/FileController.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-minio/service/FileStorageService.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-minio/service/impl/MinIOFileStorageService.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/commonUtilResult/ResponseUtil.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/config/WebSecurityConfig.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/custom/CustomMd5PasswordEncoder.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/custom/CustomUser.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/custom/LoginUserInfoHelper.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/custom/UserDetailsService.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/filter/TokenAuthenticationFilter.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/filter/TokenLoginFilter.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/common/common-security/serviceImpl/UserDetailsServiceImpl.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generator.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/controller/SysGeneratorController.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/dao/GeneratorDao.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/dao/MySQLGeneratorDao.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/dao/mapper/MySQLGeneratorDaoXml.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/entity/ColumnEntity.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/entity/TableEntity.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/service/SysGeneratorService.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/Controller.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/Dao.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/Dao.xml.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/Entity.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/Service.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/ServiceImpl.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/Vue3index.vue.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/add-or-update.vue.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/generator.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/template/index.vue.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/utils/DateUtils.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/utils/GenUtils.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorCRUD/web/CRUDPageWeb.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/.env.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/.env2.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/.env3.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/.eslintrc.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/.travis.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/README-zh.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/babel.config.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/build/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/es.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/git.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/jest.config.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/jsconfig.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/package.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/postcss.config.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/public/favicon.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/public/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/App.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/api/system/sysMenu.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/api/system/sysRole.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/api/system/sysUser.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/api/table.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/api/user.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/assets/404_images/404.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/assets/404_images/404_cloud.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/components/Breadcrumb/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/components/Hamburger/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/components/ParentView/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/components/SvgIcon/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/dashboard.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/example.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/eye-open.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/eye.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/form.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/link.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/nested.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/password.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/table.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/tree.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svg/user.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/icons/svgo.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/AppMain.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/Navbar.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/Sidebar/FixiOSBug.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/Sidebar/Item.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/Sidebar/Link.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/Sidebar/Logo.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/Sidebar/SidebarItem.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/Sidebar/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/components/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/layout/mixin/ResizeHandler.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/main.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/permission.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/router/_import_development.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/router/_import_production.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/router/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/settings.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/store/getters.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/store/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/store/modules/app.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/store/modules/settings.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/store/modules/user.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/styles/element-ui.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/styles/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/styles/mixin.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/styles/sidebar.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/styles/transition.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/styles/variables.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/utils/auth.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/utils/btn-permission.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/utils/get-page-title.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/utils/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/utils/request.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/utils/validate.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/404.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/dashboard/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/form/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/login/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/system/sysMenu/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/system/sysRole/assignAuth.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/system/sysRole/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/system/sysUser/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/table/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/src/views/tree/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/vue.config.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue3/src/assets/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/controller/SysGeneratorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/dao/GeneratorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/dao/MySQLGeneratorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/entity/ColumnEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/entity/TableEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/service/SysGeneratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/utils/GenUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/utils/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/utils/RRException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/java/com/example/demo/utils/RRExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/generator.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/mapper/MySQLGeneratorDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/Controller.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/Dao.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/Dao.xml.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/Entity.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/MongoChildrenEntity.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/MongoEntity.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/Service.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/ServiceImpl.java.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/add-or-update.vue.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/index.vue.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renren/demo/src/main/resources/template/menu.sql.vm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/src/main/java/com/xc/minio/config/MinIOConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/src/main/java/com/xc/minio/config/MinIOConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/src/main/java/com/xc/minio/service/FileStorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/src/main/java/com/xc/minio/service/impl/MinIOFileStorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/common/minio/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled - 副本/untitled - 副本/src/main/java/com/xc/example/controller/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/common/common-util/src/main/java/com/xc/common/result/ResponseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled/src/main/resources/template/Vue3index.vue.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/ModuleGroupId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/ModulePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/PackageList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/constant/common/PackagePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/entity/Module.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/entity/PomAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/entity/YamlEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/FileBuilder/BuildTheFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/FileBuilder/service/SpringbootInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/FileBuilder/service/yaml/YamlInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/Model/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/Model/ModelPomResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/common/BuilderOfCommon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/common/commonUtil/BuilderOfCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/resolver/common/serviceUtil/BuilderOfServiceUitl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/FileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/MkdirFileWriteUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/PomResolverUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/PomUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project/src/main/java/cloud/makeronbean/generate/utils/YamlDisposition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/Ceshi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/code/CodeTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/code/Knife4jCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/code/MyBatisPlusCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/code/SpringParentCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/code/WebCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/common/ModuleGroupId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/common/ModulePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/common/PackageList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/common/PackagePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/common/pom/PomAttributeConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/common/yaml/YamlPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/dependency/DependencyConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/yaml/MyBatisPlusYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/yaml/SpringBootParentYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/yaml/WebYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/constant/yaml/YamlTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/BuildTheFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/SpringbootInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/pom/PomInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/yaml/YamlInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/ItemMovement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/build/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/build/Director.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/MyBatisPlusBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/SpringBootParentBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/SpringBootWebBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/FileResolverOfModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/ModelPomResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/BuilderOfCommon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/commonUtil/BuilderOfCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/serviceUtil/BuilderOfServiceUitl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/BaseStarter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/BaseStarterAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/dto/SpringBootParentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/project/Project.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/project/ProjectInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/vo/Dependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/vo/FileEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/vo/Module.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/vo/OtherNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/vo/PomAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/model/vo/YamlEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/utils/DeleteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/utils/FileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/utils/MkdirFileWriteUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/utils/PomResolverUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/utils/PomUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/utils/SystemUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/main/java/com/yszhdhyBoot/demo/utils/YamlDisposition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo - 副本/src/test/java/com/yszhdhyBoot/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/common/common-util/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/common/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/common/service-util/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/xc/example/CommonApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/Ceshi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/CeshiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/CodeTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/Knife4jCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/MyBatisPlusCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/SpringParentCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/WebCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/ModuleGroupId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/ModulePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/PackageList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/PackagePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/pom/PomAttributeConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/yaml/YamlPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/dependency/DependencyConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/MyBatisPlusYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/SpringBootParentYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/WebYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/YamlTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/BuildTheFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/SpringbootInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/pom/PomInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/yaml/YamlInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/ItemMovement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/Director.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/MyBatisPlusBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/SpringBootParentBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/SpringBootWebBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/FileResolverOfModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/ModelPomResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/BuilderOfCommon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/commonUtil/BuilderOfCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/serviceUtil/BuilderOfServiceUitl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/BaseStarter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/BaseStarterAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/dto/SpringBootParentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/project/Project.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/project/ProjectInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/Dependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/FileEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/Module.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/OtherNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/PomAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/YamlEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/utils/DeleteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/utils/FileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/utils/MkdirFileWriteUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/utils/PomResolverUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/utils/PomUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/utils/SystemUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/java/com/yszhdhyBoot/demo/utils/YamlDisposition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/demo/src/test/java/com/yszhdhyBoot/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/model/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/Ceshi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/CeshiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/CodeTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/Knife4jCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/MyBatisPlusCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/SpringParentCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/code/WebCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/ModuleGroupId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/ModulePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/PackageList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/PackagePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/pom/PomAttributeConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/common/yaml/YamlPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/dependency/DependencyConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/MyBatisPlusYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/SpringBootParentYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/WebYamlConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/constant/yaml/YamlTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/BuildTheFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/SpringbootInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/pom/PomInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/FileBuilderOfProject/service/yaml/YamlInitiate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/ItemMovement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/Director.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/MyBatisPlusBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/SpringBootParentBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/build/FileBuilder/SpringBootWebBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/FileResolverOfModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/Model/ModelPomResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/BuilderOfCommon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/commonUtil/BuilderOfCommonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/construct/structure/common/serviceUtil/BuilderOfServiceUitl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/BaseStarter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/BaseStarterAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/dto/SpringBootParentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/project/Project.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/project/ProjectInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/Dependency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/FileEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/Module.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/OtherNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/PomAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/model/vo/YamlEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/utils/DeleteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/utils/FileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/utils/MkdirFileWriteUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/utils/PomResolverUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/utils/PomUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/utils/SystemUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/main/java/com/yszhdhyBoot/demo/utils/YamlDisposition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringbootModel/demo/src/test/java/com/yszhdhyBoot/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/Knife4jCodeConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/MyBatisPlusCodeConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/MyBatisPlusCodeConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/SpringParentCodeConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/SpringParentCodeConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/WebCodeConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/WebCodeConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/sql/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/code/sql/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/ModuleGroupId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/ModuleGroupId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/ModulePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/ModulePath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/PackageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/PackageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/PackagePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/common/PackagePath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/yaml/MyBatisPlusYamlConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/constant/yaml/MyBatisPlusYamlConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/BuildTheFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/BuildTheFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/commonUtil/JwtHelperBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/commonUtil/MD5Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/commonUtil/ResultBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/commonUtil/ResultCodeEnumBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/serviceUtil/GlobalExceptionHandlerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/serviceUtil/GuiguExceptionBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/serviceUtil/Knife4jConfigBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/common/serviceUtil/MybatisPlusConfigBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/BaseEntityBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysLoginLogBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysMenuBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysOperLogBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysPostBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysRoleBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysRoleMenuBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysUserRoleBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/system/SysUserbuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/AssginMenuVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/AssginRoleVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/LoginVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/MetaVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/RouterVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/SysLoginLogQueryVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/SysOperLogQueryVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/SysPostQueryVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/SysRoleQueryVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/model/vo/SysUserQueryVoBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/controller/IndexControllerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/controller/SysMenuControllerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/controller/SysRoleControllerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/controller/SysUserControllerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/SysMenuMapperBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/generatorCRUD/template/TemplateBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/SysRoleMapperBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/SysRoleMenuMapperBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/SysUserMapperBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/SysUserRoleMapperBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/xml/SysMenuMapperXmlBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/xml/SysRoleMapperXmlBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/xml/SysUserMapperXmlBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/mapper/xml/SysUserRoleMapperXmlBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/pom/PomInitiate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/pom/PomInitiate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/SysMenuServiceBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/SysRoleMenuServiceBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/SysRoleServiceBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/SysUserRoleServiceBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/SysUserServiceBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/impl/SysMenuServiceImplBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/impl/SysRoleMenuServiceImplBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/impl/SysRoleServiceImplBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/impl/SysUserDetailsServiceImplBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/impl/SysUserRoleServiceImplBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/service/impl/SysUserServiceImplBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/utils/MenuHelperBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/yaml/YamlInitiate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/FileBuilderOfProject/service/yaml/YamlInitiate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/ItemMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/ItemMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/SpringBootWebBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/build/FileBuilder/SpringBootWebBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/BuilderOfCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/BuilderOfCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/serviceUtil/BuilderOfServiceUitl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/common/serviceUtil/BuilderOfServiceUitl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/database/BuilderSql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/construct/structure/database/BuilderSql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/project/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/model/project/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/FreeMarkerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/FreeMarkerUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/PomAndYamlBuildMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/PomAndYamlBuildMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/PomResolverUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/PomResolverUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/PomUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/PomUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/SystemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/SystemUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/YamlDisposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/YamlDisposition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/database/TestConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yszhdhy/generator/utils/database/TestConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/model/model/system/SysMenu.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/model/model/system/SysMenu.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/model/model/vo/RouterVo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/model/model/vo/RouterVo.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/service-util/Knife4jConfig.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/service-util/Knife4jConfig.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/service-util/MybatisPlusConfig.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/service-util/MybatisPlusConfig.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/service/service/impl/SysMenuServiceImpl.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/service/service/impl/SysMenuServiceImpl.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\environment\java\maven\apache-maven-3.8.8-bin\apache-maven-3.8.8\repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../environment/java/maven/apache-maven-3.8.8-bin/apache-maven-3.8.8" />
+        <option name="userSettingsFile" value="E:\environment\java\maven\apache-maven-3.8.8-bin\apache-maven-3.8.8\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2PJH7KpZ6GlSEJbFiSpt3ZzOGCN" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project/kun/moreModule/generator/src/main/resources/common/common-elasticsearch&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.15304947&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;dac9630aec642a428cd73f4be0a03569&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\app\\javaApp\\apps\\IDEA-U\\ch-0\\232.8660.185\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources\common\common-elasticsearch" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\java\com\yszhdhy\generator\construct\FileBuilderOfProject\common" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources\generatorCRUD\template" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources\vue3" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources\vue\src" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources\common-util" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources\service-util" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\resources" />
+      <recent name="E:\project\kun\moreModule\generator\src\main\webapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yszhdhy.generator.construct.FileBuilderOfProject.vue" />
+      <recent name="com.yszhdhy.generator.construct.FileBuilderOfProject.service" />
+      <recent name="com.yszhdhy.generator.construct.FileBuilderOfProject.service.generatorCRUD" />
+      <recent name="com.yszhdhy.generator.construct.FileBuilderOfProject.model" />
+      <recent name="com.yszhdhy.generator.construct.FileBuilderOfProject.common.serviceUtil" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="Ceshi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yszhdhy.generator.Ceshi" />
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yszhdhy.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yszhdhy.generator.utils.database.TestConnection" />
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yszhdhy.generator.utils.database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCeshi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="generator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCeshi" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCeshi.Ceshi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="generator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCeshi" />
+      <option name="METHOD_NAME" value="Ceshi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="generator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yszhdhy.generator.DemoApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yszhdhy.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Ceshi" />
+        <item itemvalue="Spring Boot.DemoApplication" />
+        <item itemvalue="JUnit.TestCeshi.Ceshi" />
+        <item itemvalue="JUnit.TestCeshi" />
+        <item itemvalue="Application.TestConnection" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8910f036-3423-402b-9585-084ea946e5c3" name="Changes" comment="" />
+      <created>1683168097280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683168097280</updated>
+      <workItem from="1683168098297" duration="7063000" />
+      <workItem from="1683189343844" duration="8123000" />
+      <workItem from="1683243919138" duration="13832000" />
+      <workItem from="1683261503297" duration="670000" />
+      <workItem from="1683276333096" duration="3545000" />
+      <workItem from="1683416893129" duration="4673000" />
+      <workItem from="1683433838560" duration="8009000" />
+      <workItem from="1683449816511" duration="793000" />
+      <workItem from="1683455319729" duration="9810000" />
+      <workItem from="1683505466482" duration="5395000" />
+      <workItem from="1683511885183" duration="25495000" />
+      <workItem from="1683590203781" duration="1073000" />
+      <workItem from="1683591489600" duration="4170000" />
+      <workItem from="1683609376802" duration="18882000" />
+      <workItem from="1683676582234" duration="4743000" />
+      <workItem from="1683697669686" duration="1199000" />
+      <workItem from="1683712044412" duration="992000" />
+      <workItem from="1683849123075" duration="376000" />
+      <workItem from="1683849743790" duration="112000" />
+      <workItem from="1683850099621" duration="55000" />
+      <workItem from="1683850351400" duration="13000" />
+      <workItem from="1683935366483" duration="182000" />
+      <workItem from="1684055495623" duration="3063000" />
+      <workItem from="1684068886292" duration="334000" />
+      <workItem from="1684675830357" duration="1232000" />
+      <workItem from="1684712757774" duration="11835000" />
+      <workItem from="1685011743925" duration="48000" />
+      <workItem from="1686275086343" duration="4274000" />
+      <workItem from="1687584871832" duration="2137000" />
+      <workItem from="1687587187073" duration="21602000" />
+      <workItem from="1687670704167" duration="12736000" />
+      <workItem from="1687737016889" duration="16601000" />
+      <workItem from="1687823477704" duration="22691000" />
+      <workItem from="1687928931624" duration="198000" />
+      <workItem from="1687943589226" duration="1751000" />
+      <workItem from="1688176642880" duration="47000" />
+      <workItem from="1688178565063" duration="1220000" />
+      <workItem from="1688193510869" duration="630000" />
+      <workItem from="1689488511352" duration="37000" />
+      <workItem from="1689831023016" duration="5698000" />
+      <workItem from="1689841317747" duration="1608000" />
+      <workItem from="1689860662614" duration="1265000" />
+      <workItem from="1689904062447" duration="169000" />
+      <workItem from="1689916469915" duration="75000" />
+      <workItem from="1689924659325" duration="3154000" />
+      <workItem from="1689934176307" duration="3120000" />
+      <workItem from="1689945010085" duration="1930000" />
+      <workItem from="1689985769929" duration="3122000" />
+      <workItem from="1689989009648" duration="172000" />
+      <workItem from="1689989198198" duration="18192000" />
+      <workItem from="1690071782609" duration="15945000" />
+      <workItem from="1690097944035" duration="12118000" />
+      <workItem from="1690158892494" duration="3598000" />
+      <workItem from="1690166921520" duration="273000" />
+      <workItem from="1690167869494" duration="3482000" />
+      <workItem from="1690196913117" duration="4945000" />
+      <workItem from="1690204003625" duration="2164000" />
+      <workItem from="1690245259840" duration="5997000" />
+      <workItem from="1690287685391" duration="3367000" />
+      <workItem from="1690331368797" duration="1243000" />
+      <workItem from="1690527318494" duration="14000" />
+      <workItem from="1690874248086" duration="9226000" />
+      <workItem from="1690938519254" duration="6502000" />
+      <workItem from="1690947508348" duration="4074000" />
+    </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1683257754061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683257754061</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first">
+      <created>1683257858915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683257858915</updated>
+    </task>
+    <task id="LOCAL-00003" summary="第二版">
+      <created>1683547850782</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683547850782</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <MESSAGE value="第二版" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二版" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

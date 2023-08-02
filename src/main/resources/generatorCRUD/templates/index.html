@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>代码生成器</title>
+    <script th:inline="none" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link th:inline="none" rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script th:inline="none" src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+
+
+    <template>
+        <el-container>
+            <el-header>Header</el-header>
+            <el-container>
+                <el-aside width="400px">
+                    <el-timeline>
+                        <el-timeline-item v-for="item in timeLine"
+                                          :key="item.id"
+                                          :timestamp="getTimestamp(item.id)"
+                                          placement="top"
+                                          @click.native="handleItemClick(item.id)">
+                            <el-card :class="{ active: activeItem === item.id }">
+                                <h4>{{item.name}}</h4>
+                            </el-card>
+                        </el-timeline-item>
+                    </el-timeline>
+                </el-aside>
+
+
+                <el-main style="box-shadow: darkgray">
+                    <el-table
+                            :data="tableData"
+                            border
+                            v-if="timeLine[1].isTrue"
+                            style="width: 100%">
+                        <el-table-column
+                                prop="date"
+                                label="日期"
+                                width="250">
+                        </el-table-column>
+                        <el-table-column
+                                prop="name"
+                                label="表名"
+                                width="180">
+                        </el-table-column>
+                        <el-table-column
+                                fixed="right"
+                                label="操作">
+                            <template slot-scope="scope">
+                                <el-button type="primary" @click="dianji(scope.row.name)">生成代码</el-button>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+
+                    <el-row v-if="timeLine[0].isTrue">
+                        <el-col :span="8" v-for="(item, index) in templates" :key="item.id" :offset="index > 0 ? 2 : 0" style="height: 200px;width: 200px">
+                            <el-card :body-style="{ padding: '0px' }">
+                                <img :src="item.imageUrl" class="image">
+                                <div style="padding: 14px;">
+                                    <span>{{item.des}}</span>
+                                    <div class="bottom clearfix">
+                                        <time class="time">{{ item.name }}</time>
+                                        <el-button type="primary" round @click="generatorTemplate(item.id)">生成</el-button>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
+
+
+                    <el-row v-if="timeLine[2].isTrue">
+                        <el-col :span="8" v-for="(item, index) in BackEndModules" :key="item.id" :offset="index > 0 ? 2 : 0" style="height: 200px;width: 200px">
+                            <el-card :body-style="{ padding: '0px' }" >
+                                <img :src="item.imageUrl" class="image">
+                                <div style="padding: 14px;">
+                                    <span>{{item.des}}</span>
+                                    <div class="bottom clearfix">
+                                        <time class="time">{{ item.name }}</time>
+                                        <el-button type="primary" round @click="generatorBackEndModules(item.id)">生成</el-button>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
+
+                </el-main>
+            </el-container>
+        </el-container>
+
+        <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" width="40%">
+            <el-form ref="dataForm" :model="sysMenu" label-width="150px" size="small" style="padding-right: 40px;">
+                <el-form-item >
+                    <span slot="label">
+                <el-tooltip content='控制器中定义的共享映射，如：@RequestMapping("/admin/web")； 这里输入路径即可，如：/admin/web'
+                            placement="top">
+                <i class="el-icon-question"></i>
+                </el-tooltip>
+                    RequestMapping
+                    </span>
+                    <el-input v-model="sysMenu.moduleName" placeholder="请输入组件路径" maxlength="100"/>
+                </el-form-item>
+                <el-form-item label="作者" >
+                    <el-input v-model="sysMenu.author"/>
+                </el-form-item>
+                <el-form-item label="邮箱" >
+                    <el-input v-model="sysMenu.email"/>
+                </el-form-item>
+                <el-form-item label="菜单名称" prop="name">
+                    <el-input v-model="sysMenu.name"/>
+                </el-form-item>
+                <el-form-item label="图标" prop="icon" v-if="sysMenu.type !== 2">
+                    <el-select v-model="sysMenu.vue2Icon" clearable>
+                        <el-option v-for="item in iconList" :key="item.class" :label="item.class" :value="item.class">
+            <span style="float: left;">
+             <i :class="item.class"></i>  <!-- 如果动态显示图标，这里添加判断 -->
+            </span>
+                            <span style="padding-left: 6px;">{{ item.class }}</span>
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="排序">
+                    <el-input-number v-model="sysMenu.sortValue" controls-position="right" :min="0"/>
+                </el-form-item>
+                <el-form-item  prop="path">
+                  <span slot="label">
+                <el-tooltip content='生成前端文件存放位置 '
+                            placement="top">
+                <i class="el-icon-question"></i>
+                </el-tooltip>
+                    路由位置
+                    </span>
+                    <el-select v-model="sysMenu.path" clearable>
+
+                        <el-option v-for="item in sysMenuList" :key="item.id" :label="item.name" :value="item.path">
+            <span style="float: left;">
+             <i :class="item.name"></i>  <!-- 如果动态显示图标，这里添加判断 -->
+            </span>
+                            <span style="padding-left: 6px;">{{ item.name }}</span>
+                        </el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item prop="component" v-if="sysMenu.type !== 0">
+              <span slot="label">
+                <el-tooltip content="访问的组件路径，如：`system/user/index`，默认在`views`目录下" placement="top">
+                <i class="el-icon-question"></i>
+                </el-tooltip>
+                组件路径
+              </span>
+                    <el-input v-model="sysMenu.component" placeholder="请输入组件路径"/>
+                </el-form-item>
+                <el-form-item v-if="sysMenu.type === 2">
+                    <el-input v-model="sysMenu.perms" placeholder="请输入权限标识" maxlength="100"/>
+                    <span slot="label">
+                <el-tooltip content="控制器中定义的权限字符，如：@PreAuthorize(hasAuthority('bnt.sysRole.list'))"
+                            placement="top">
+                <i class="el-icon-question"></i>
+                </el-tooltip>
+                权限字符
+              </span>
+                </el-form-item>
+                <el-form-item label="状态" prop="type">
+                    <el-radio-group v-model="sysMenu.status">
+                        <el-radio :label="1">正常</el-radio>
+                        <el-radio :label="0">停用</el-radio>
+                    </el-radio-group>
+                </el-form-item>
+
+                <el-form-item label="角色" prop="type">
+                    <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">
+                        全选
+                    </el-checkbox>
+                    <div style="margin: 15px 0;"></div>
+                    <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
+                        <el-checkbox v-for="item in sysRoleList" :label="item.roleName" :key="item.id">
+                            {{item.roleName}}
+                        </el-checkbox>
+                    </el-checkbox-group>
+                </el-form-item>
+
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false" size="small" icon="el-icon-refresh-right">取 消</el-button>
+        <el-button type="primary" icon="el-icon-check" @click="saveOrUpdate2(1)" size="small">打成zip压缩包</el-button>
+        <el-button type="primary" icon="el-icon-check" @click="saveOrUpdate(0)" size="small">将代码生成在项目中</el-button>
+      </span>
+        </el-dialog>
+    </template>
+</div>
+
+<script th:inline="javascript">   // 使用 其中的 数据
+const defaultForm = {
+    id: '',
+    parentId: '',
+    name: '',
+    type: 0,
+    path: '',
+    component: '',
+    perms: '',
+    icon: '',
+    sortValue: 1,
+    status: 1,
+    tableName:'',
+    moduleName:'',
+    author:'',
+    email:'',
+    roleIds:[],
+    isPack:0
+}
+var app = new Vue({
+    el: '#app',
+    data: {
+        checkAll: false,
+        checkedCities: [],
+        isIndeterminate: true,
+
+        tableData: [],
+
+        sysMenuList: [],
+        sysRoleList: [],
+        sysRoleListName: [],
+
+        expandKeys: [], // 需要自动展开的项
+
+        typeDisabled: false,
+        type0Disabled: false,
+        type1Disabled: false,
+        type2Disabled: false,
+        dialogTitle: '',
+
+        dialogVisible: false,
+        sysMenu: defaultForm,
+        saveBtnDisabled: false,
+
+        activeItem: 0,
+        timeLine:[
+            {
+                id:0,
+                isTrue:true,
+                name:'前端模版'
+            },
+            {
+                id:1,
+                isTrue:false,
+                name:'GeneratorPageCurd'
+            },
+            {
+                id:2,
+                isTrue:false,
+                name:'后端模块'
+            }
+        ],
+        templates:[],
+        BackEndModules:[],
+
+        iconList: [
+            {
+                class: "el-icon-s-tools",
+            },
+            {
+                class: "el-icon-s-custom",
+            },
+            {
+                class: "el-icon-setting",
+            },
+            {
+                class: "el-icon-user-solid",
+            },
+            {
+                class: "el-icon-s-help",
+            },
+            {
+                class: "el-icon-phone",
+            },
+            {
+                class: "el-icon-s-unfold",
+            },
+            {
+                class: "el-icon-s-operation",
+            },
+            {
+                class: "el-icon-more-outline",
+            },
+            {
+                class: "el-icon-s-check",
+            },
+            {
+                class: "el-icon-tickets",
+            },
+            {
+                class: "el-icon-s-goods",
+            },
+            {
+                class: "el-icon-document-remove",
+            },
+            {
+                class: "el-icon-warning",
+            },
+            {
+                class: "el-icon-warning-outline",
+            },
+            {
+                class: "el-icon-question",
+            },
+            {
+                class: "el-icon-info",
+            }
+        ]
+    },
+    created() {
+        console.log(this.timeLine)
+        this.tableData = [[${tableNames}]]
+        this.sysMenuList = [[${SysMenu}]]
+        this.sysRoleList = [[${sysRoleList}]]
+
+        for (let index in this.sysRoleList) {
+            this.sysRoleListName.push(this.sysRoleList[index].roleName)
+        }
+
+        this.getTemplate()
+        this.getBackEndModules()
+    },
+    methods: {
+
+        handleItemClick(itemNumber) {
+            for (const item in this.timeLine) {
+                if (this.timeLine[item].id === itemNumber) {
+                    this.timeLine[item].isTrue = true;
+                } else {
+                    this.timeLine[item].isTrue = false;
+                }
+            }
+            this.activeItem = itemNumber; // 在点击时更新 activeItem 的值，触发动态样式的切换
+            console.log(this.timeLine)
+        },
+
+        getTimestamp(itemNumber) {
+            // 在这里返回对应的时间戳，您可以根据需要进行修改
+            if (itemNumber === 1) return "2018/4/12";
+            if (itemNumber === 2) return "2018/4/3";
+            if (itemNumber === 3) return "2018/4/2";
+            return ""; // 如果没有匹配的时间戳，请根据实际情况返回合适的值
+        },
+
+        getTemplate(){
+            axios.get("http://localhost:8080/admin/web/template")
+                .then(({data})=>{
+                    this.templates = data.data
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    // 处理错误响应
+                    this.$message.error("模版获取失败")
+                });
+        },
+
+        getBackEndModules(){
+            axios.get("http://localhost:8080/admin/web/BackEndModules")
+                .then(({data})=>{
+                    this.BackEndModules = data.data
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    // 处理错误响应
+                    this.$message.error("模版获取失败")
+                });
+        },
+
+
+
+        generatorTemplate(id){
+            axios.get(`http://localhost:8080/admin/web/generatorTemplate/${id}`)
+                .then(({data})=>{
+                    console.log(data)
+                    if(data.code===200){
+                        // 处理成功响应
+                        this.$message({
+                            message: '代码生成成功',
+                            type: 'success'
+                        });
+                    }
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    // 处理错误响应
+                    this.$message.error("模版获取失败")
+                });
+        },
+
+
+        generatorBackEndModules(id){
+            axios.get(`http://localhost:8080/admin/web/generatorBackEndModules/${id}`)
+                .then(({data})=>{
+                    console.log(data)
+                    if(data.code===200){
+                        // 处理成功响应
+                        this.$message({
+                            message: '代码生成成功',
+                            type: 'success'
+                        });
+                    }
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    // 处理错误响应
+                    this.$message.error("模版获取失败")
+                });
+        },
+
+        handleCheckAllChange(val) {
+            this.checkedCities = val ? this.sysRoleListName : [];
+            this.isIndeterminate = false;
+        },
+
+        handleCheckedCitiesChange(value) {
+            let checkedCount = value.length;
+            this.checkAll = checkedCount === this.sysRoleList.length;
+            this.isIndeterminate = checkedCount > 0 && checkedCount < this.sysRoleList.length;
+        },
+
+        findIdByName(name) {
+            const city =  this.sysRoleList.find(item => item.roleName === name);
+            return city ? city.id : null;
+        },
+
+        dianji(tableName) {
+            this.dialogVisible = true
+            this.sysMenu.tableName = tableName;
+        },
+        saveOrUpdate(isPack){
+            // 查询所有的角色的id
+            for (const index in this.checkedCities) {
+                defaultForm.roleIds.push(this.findIdByName(this.checkedCities[index]))
+            }
+
+            this.dialogVisible = false
+            this.sysMenu.isPack = isPack
+            axios.post('http://localhost:8080/admin/web/save', this.sysMenu)
+                .then( response =>{
+                    console.log(response.data);
+                    // 处理成功响应
+                    this.$message({
+                        message: '代码生成成功',
+                        type: 'success'
+                    });
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    // 处理错误响应
+                    this.$message.error("代码生成失败")
+                });
+        },
+
+        saveOrUpdate2(isPack){
+            // 查询所有的角色的id
+            for (const index in this.checkedCities) {
+                defaultForm.roleIds.push(this.findIdByName(this.checkedCities[index]))
+            }
+
+            this.dialogVisible = false
+            this.sysMenu.isPack = isPack
+            const encodedParams = Object.keys(this.sysMenu).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(this.sysMenu[key])}`).join('&');
+            console.log(encodedParams)
+            axios.get(`http://localhost:8080/admin/web/code?${encodedParams}`,{responseType: 'arraybuffer'})
+                .then( response =>{
+                    const blob = new Blob([response.data], { type: 'application/octet-stream' });
+                    const downloadUrl = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = downloadUrl;
+                    link.download = 'yszhdhy.zip';
+                    link.click();
+                    URL.revokeObjectURL(downloadUrl);
+                    // 处理成功响应
+                    this.$message({
+                        message: '代码生成成功',
+                        type: 'success'
+                    });
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    // 处理错误响应
+                    this.$message.error("代码生成失败")
+                });
+        }
+
+
+    },
+});
+
+// var myValue = [[${tableNames}]];
+console.log([[${tableNames}]])
+// console.log(myValue)
+
+</script>
+
+<style>
+
+    .time {
+        font-size: 13px;
+        color: #999;
+    }
+
+    .bottom {
+        margin-top: 13px;
+        line-height: 12px;
+    }
+
+    .button {
+        padding: 0;
+        float: right;
+    }
+
+    .image {
+        width: 100%;
+        display: block;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: "";
+    }
+
+    .clearfix:after {
+        clear: both
+    }
+    .active {
+        background-color: skyblue;
+        color: white; /* Optional: Change text color to make it visible */
+    }
+</style>
+</body>
+</html>
