@@ -109,6 +109,19 @@ public class CeShi {
 重新选择jdk1.8 要重新加载一下项目。便可以启动项目了。会自动打开代码生成器的页面。
 
 
+##部署
+```xml
+<packaging>jar</packaging>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+```
 
 # 代码运行相关截图
 
