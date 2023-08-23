@@ -24,8 +24,8 @@ router.beforeEach(async (to, from, next) => {
                     await userStore.userInfo() //刷新的时候是异步路由，有可能获取到用户信息，异步路由还没有加载完毕，出现空白效果
                     next({ ...to }) //先不放行，先保留路由信息在放行
                 } catch (error) {
-                 //   await userStore.userLogout()
-                    // next({ path: '/login', query: { redirect: to.path } })
+                    await userStore.userLogout()
+                    next({ path: '/login', query: { redirect: to.path } })
                 }
             }
         }
