@@ -63,7 +63,7 @@
     <repositories> 
         <repository> 
             <id>generator-repo</id>  
-            <url>https://juan:xu083114@gitee.com/dachang-rolling-dog/maven-dependences/raw/master</url> 
+            <url>https://gitee.com/dachang-rolling-dog/maven-dependences/raw/master</url> 
         </repository> 
 </repositories> 
 
