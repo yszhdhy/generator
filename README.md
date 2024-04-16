@@ -123,6 +123,19 @@ public class CeShi {
 </build>
 ```
 
+##部署
+```xml
+<packaging>jar</packaging>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+```
 
 # 代码运行相关截图
 
