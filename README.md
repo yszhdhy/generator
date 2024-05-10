@@ -1,6 +1,8 @@
 # 代码生成器
 
-## 注意点：创建的maven项目一定要是带web的。项目名称一定要使用untitled 或者是untitled1之类的 不然就会有项目在创建时找不到路径的问题出现（此问题有待解决）。
+<div align="center"> <img src="https://github-profile-trophy.vercel.app/?username=sun0225SUN" /> </div>
+
+### 注意点：创建的maven项目一定要是带web的。项目名称一定要使用untitled 或者是untitled1之类的 不然就会有项目在创建时找不到路径的问题出现（此问题有待解决）。
 
 ## 前端模块：
 
